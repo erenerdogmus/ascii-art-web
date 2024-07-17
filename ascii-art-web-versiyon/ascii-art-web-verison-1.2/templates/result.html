@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASCII Art Result</title>
+    <link rel="stylesheet" href="../static/style.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        pre {
+            white-space: pre-wrap;
+            font-family: monospace;
+            font-size: 10px;
+        }
+        form .signin{
+            width: 80%; 
+            height: 80%; 
+        }
+        .download {
+            position: absolute;
+            top: -90px;
+            right: -15px;
+        }
+        button:hover {
+            background-color: #00FF00;
+            scale: 1.1;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <form action="/result" method="post">
+        {{range .CountSlice}}
+        <span></span>
+        {{end}}
+        <div class="signin">
+            <div class="content">
+                <h2>ASCII Art Result</h2>
+                <div class="form">
+                    <div style="color: white;" class="inputBx valueinputBx">
+                        <pre>{{.Ascii}}</pre>
+                    </div>
+                   
+                    <div class="inputBx download">
+                        <button type="button" onclick="downloadFile()" style="width: 40px; border: none; height: 40px; border-radius: 50%; overflow: hidden; display: flex; justify-content: center; align-items: center;">
+                            <i class="fas fa-download" style="font-size: 20px;"></i>
+                        </button>
+                    </div>
+                    <div class="inputBx">
+                        <h3><a href="http://localhost:8045/index.html">RETURN CONVERTER </a></h3>
+                    </div>
+                </div>
+            </div>
+        </div>     
+    </form> 
+    <script src="../static/app.js"></script>
+</body>
+</html>

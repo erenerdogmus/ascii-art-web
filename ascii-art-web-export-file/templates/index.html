@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASCII Art Generator</title>
+    <link rel="stylesheet" href="../static/style.css">
+    <style>
+        span:hover {
+            background: #0f0;
+            transition: 0s; 
+        }
+    </style>
+</head>
+<body>
+    <form action="/result" method="post">
+        {{range .CountSlice}}
+        <span></span>
+        {{end}} 
+        <div class="signin">
+            <div class="content">
+                <h2>Ascii-art</h2>
+                <div class="form">
+                    <div class="inputBx">
+                        <textarea style="background: #333;  position: relative;  width:  100%; font-weight: 500; font-size: 1em; border: none; outline: none; padding: 25px 10px 7.5px; border-radius: 4px;  color: #fff;  font-weight: 500;" id="textarea" name="text" type="text" placeholder="Enter Text" required autocomplete="off"></textarea>  
+                    </div>
+                    <select id="banner" name="banner" class="opt">
+                        <option value="standard">Standard</option>
+                        <option value="shadow">Shadow</option>
+                        <option value="thinkertoy">Thinkertoy</option>
+                    </select>
+                    <div class="inputBx">
+                        <input type="submit" name="generate" value="Generate ASCII Art">
+                    </div>
+                     <div class="inputBx" style="display: flex; flex-direction: column;">
+                        <input  style="width: 150px; margin-left: 19%; margin-bottom: 5px; padding: 5px;" type="text" name="export" id="fileNameInput" required value="Output Filename" onclick="clearValue()" />
+                        <input style=" width: 230px; margin-left: 2%; border-radius: 20px; " type="submit" name="export" value="Export File">
+                    
+                    </div>
+                </div>
+            </div>
+        </div>     
+    </form> 
+    <script src="../static/app.js"></script>
+</body>
+</html>

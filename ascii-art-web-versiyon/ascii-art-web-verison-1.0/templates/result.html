@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASCII Art Result</title>
+    <link rel="stylesheet" href="../static/style.css">
+    <style>
+        pre {
+            white-space: pre-wrap;
+            font-family: monospace;
+            font-size: 10px;
+        }
+        form .signin{
+            width: 80%; 
+            height: 80%; 
+        }
+    </style>
+</head>
+<body>
+    <form action="/result" method="post">
+        {{range .CountSlice}}
+        <span></span>
+        {{end}}
+        <div class="signin">
+            <div class="content">
+                <h2>ASCII Art Result</h2>
+                <div class="form">
+                    <div style="color: white;" class="inputBx valueinputBx">
+                        <pre>{{.Ascii}}</pre>
+                    </div>
+                    <div class="inputBx">
+                        <h3><a href="http://localhost:8045/index.html">RETURN CONVERTER </a></h3>
+                    </div>
+                </div>
+            </div>
+        </div>     
+    </form> 
+</body>
+</html>

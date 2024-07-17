@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASCII Art Result</title>
+    <link rel="stylesheet" href="static/style.css">
+    <style>
+        pre {
+            white-space: pre-wrap;
+            font-family: monospace;
+            font-size: 16px;
+        }
+        form .signin{
+            width: 40%; 
+            height: 40%; 
+            /* overflow-y: scroll; */
+        }
+    </style>
+</head>
+<body>
+    <form action="/download" method="post">
+        {{range .CountSlice}}
+        <span></span>
+        {{end}} 
+        <div class="signin">
+            <div class="content">
+                <h2>{{.Text}}</h2>
+                    <div class="inputBx">
+                        <h3><a href="http://localhost:8045/index.html">RETURN CONVERTER </a></h3>
+                    </div>
+            </div>
+        </div>     
+    </form> 
+</body>
+</html>
+
+
