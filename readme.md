@@ -6,9 +6,9 @@ Ascii-art-web, son projeniz olan [ascii-art](../ascii-) web **GUI** (grafiksel k
 
 Web sayfanız farklı bannerların kullanımına izin vermelidir:
 
-- [gölge](../ascii-art/shadow.txt)
+- [shadow](../ascii-art/shadow.txt)
 - [standart](../ascii-art/standard.txt)
-- [düşünenoyuncak](../ascii-art/thinkertoy.txt)
+- [thinkertoy](../ascii-art/thinkertoy.txt)
 
 Aşağıdaki HTTP uç noktalarını uygulayın:
 
